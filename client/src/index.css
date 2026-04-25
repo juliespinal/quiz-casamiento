@@ -1,1 +1,46 @@
 @import "tailwindcss";
+/* Configuración de la fuente personalizada */
+@font-face {
+  font-family: 'BodaFont';
+  src: url('./assets/fonts/Aurora.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  /* Plan B: Si la fuente no carga */
+  font-display: swap;
+}
+
+:root {
+  --color-sage: #9A9B6A;
+  --color-forest: #154734;
+  --color-sand: #D4B996;
+  --color-navy: #1E2D3D;
+  --color-burgundy: #6C1B1F;
+}
+
+.font-boda {
+  font-family: 'BodaFont', 'Aurora' ,'Georgia', 'Times New Roman', serif;
+}
+
+/* Efecto Glassmorphism (Estilo Apple) */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+}
+
+.glass-dark {
+  background: rgba(21, 71, 52, 0.4); /* Verde bosque con transparencia */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fondo general de la App */
+.bg-wedding {
+  background-image: url('./assets/fondo.jpg'); /* Tu imagen armada */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
